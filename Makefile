@@ -1,4 +1,5 @@
 dev-init:
+	rm -rf .terraform/terraform.tfstate
 	terraform init -backend-config=./envinonments/dev/state.tfvars
 
 dev-plan:
@@ -9,6 +10,7 @@ dev-apply:
 
 
 prod-init:
+	rm -rf .terraform/terraform.tfstate
 	terraform init -backend-config=./envinonments/prod/state.tfvars
 
 prod-plan:
