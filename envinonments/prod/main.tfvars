@@ -35,4 +35,3 @@ env       = "prod"
 ami       = "ami-09c813fb71547fc4f"
 zone_id   = "Z09952091XFAJVW6ZEAR4"
 zone_name = "shamidevops.online"
-
