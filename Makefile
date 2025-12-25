@@ -1,5 +1,5 @@
 dev-init:
-	terraform init -backend-config=.envinonments/dev/state.tfvars
+	terraform init -backend-config=./envinonments/dev/state.tfvars
 
 dev-plan:
 	terraform plan -var-file=envinonments/dev/main.tfvars
@@ -9,7 +9,7 @@ dev-apply:
 
 
 prod-init:
-	terraform init -backend-config=.envinonments/prod/state.tfvars
+	terraform init -backend-config=./envinonments/prod/state.tfvars
 
 prod-plan:
 	terraform plan -var-file=envinonments/prod/main.tfvars
