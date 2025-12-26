@@ -1,5 +1,5 @@
 instances = {
-  frontned = {
+  frontend = {
     instance_type = "t3.small"
   }
   mongodb = {
