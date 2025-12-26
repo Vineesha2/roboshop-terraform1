@@ -7,3 +7,4 @@ module "ec2" {
   name          = each.key
   zone_id       = var.zone_id
 }
+
