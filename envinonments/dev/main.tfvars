@@ -1,10 +1,10 @@
 instances = {
-  frontend = {
-    instance_type = "t3.small"
-  }
-  # mongodb = {
+  # frontend = {
   #   instance_type = "t3.small"
   # }
+  mongodb = {
+    instance_type = "t3.small"
+  }
   # redis = {
   #   instance_type = "t3.small"
   # }
