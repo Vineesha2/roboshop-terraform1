@@ -26,6 +26,10 @@ resource "aws_route53_record" "public" {
 }
 
 resource "null_resource" "ansible" {
+  triggers = {
+    always = var.env  == null ? timestamp() : "false"
+  }
+
   depends_on = [aws_route53_record.record]
   provisioner "remote-exec" {
     connection {
