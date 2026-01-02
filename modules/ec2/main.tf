@@ -40,7 +40,7 @@ resource "null_resource" "ansible" {
     }
 
     inline = [
-      "sudo python3.11 -m pip install ansible hvac",
+      "sudo pip3.11 install ansible hvac",
       "ansible-pull -i localhost, -U https://github.com/shamidevsecops/roboshop-ansible roboshop.yml -e role_name=${var.name} -e token=${var.token} -e env=${var.env}"
     ]
   }
