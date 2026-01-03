@@ -32,7 +32,7 @@ instances = {
 }
 
 env       = "prod"
-ami       = "ami-09c813fb71547fc4f"
+ami       = "ami-09a8de5de0fa65153"
 zone_id   = "Z09952091XFAJVW6ZEAR4"
 zone_name = "shamidevops.online"
 instance_type = "t3.small"
