@@ -3,6 +3,12 @@ resource "aws_instance" "instance" {
   instance_type = var.instance_type
   vpc_security_group_ids = [data.aws_security_group.allow-all.id]
 
+  root_block_device {
+    volume_size = var.disk_size
+    encrypted   = true
+    # kms_key_id  = var.kms_arn_id
+  }
+
   tags = {
     Name = local.tagName
   }
@@ -41,7 +47,7 @@ resource "null_resource" "ansible" {
 
     inline = [
       "sudo pip3.11 install ansible hvac",
-      "ansible-pull -i localhost, -U https://github.com/shamidevsecops/roboshop-ansible roboshop.yml -e role_name=${var.name} -e token=${var.token} -e env=${var.env}"
+      "ansible-pull -i localhost, -U https://github.com/shamidevsecops/roboshop-ansible roboshop.yml -e role_name=${var.name} -e token=${var.token} -e env=${var.env} | sudo tee /opt/ansible.log"
     ]
   }
 }
