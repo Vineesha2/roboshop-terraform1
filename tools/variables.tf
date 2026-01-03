@@ -3,7 +3,7 @@ variable "zone_id" {
 }
 
 variable "ami" {
-  default = "ami-09a8de5de0fa65153"
+  default = "ami-09c813fb71547fc4f"
 }
 
 variable "token" {}
